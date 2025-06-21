@@ -40,11 +40,35 @@ img {
     background-position: 50%;
     background-size: cover;
     padding: 5rem 0;
+    position: relative;
 }
 
 .header__guitarra {
     display: none;
 }
+
+@media (min-width: 768px) {
+    .header__guitarra {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        animation-name: mostrarImagen;
+        animation-duration: 2s;
+    }
+}
+
+@keyframes mostrarImagen {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .header__barra {
     display: flex;
@@ -68,6 +92,8 @@ img {
     display: flex;
     gap: 2rem;
     margin-top: 5rem;
+    position: relative;
+    z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -106,6 +132,11 @@ img {
 
 .modelo__nombre {
     font-size: 8rem;
+}
+
+.modelo__descripcion {
+    position: relative;
+    z-index: 1;
 }
 
 .modelo__precio {
