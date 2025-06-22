@@ -282,3 +282,64 @@ img {
 .cursos__enlace:hover {
     background-color: var(--primary);
 }
+
+/* Blog */
+
+.blog__grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .blog__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.entrada__contenido {
+    padding: 2rem;
+}
+
+.entrada__titulo {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+.entrada__fecha {
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+
+.entrada__enlace {
+    color: var(--negro);
+    margin-top: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.entrada__enlace:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+}
+
+.entrada__texto {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    overflow: hidden;
+}
