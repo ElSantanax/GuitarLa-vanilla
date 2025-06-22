@@ -26,13 +26,13 @@ img {
     max-width: 100%;
 }
 
-[class$=__contenedor] {
+[class*=__contenedor] {
     max-width: 120rem;
     margin: 0 auto;
     width: 95%;
 }
 
-[class$=__heading] {
+[class*=__heading] {
     font-size: 4rem;
     text-align: center;
     font-weight: 900;
@@ -228,4 +228,57 @@ img {
 .producto__enlace:hover {
     background-color: var(--primary);
     color: var(--blanco);
+}
+
+/* Cursos */
+
+.cursos {
+    background-image: linear-gradient(to right, rgb(0 0 0 / .65), rgb(0 0 0 / .65)), url('/img/cursos_bg.jpg');
+    padding: 10rem 0;
+    margin-top: 10rem;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 1200px) {
+    .curso__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.cursos__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2 / 3;
+}
+
+.cursos__heading {
+    margin: 0;
+}
+
+.cursos__texto {
+    color: var(--blanco);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.cursos__enlace {
+    color: var(--blanco);
+    margin-top: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.cursos__enlace:hover {
+    background-color: var(--primary);
 }
