@@ -26,13 +26,13 @@ img {
     max-width: 100%;
 }
 
-[class*=__contenedor] {
+[class*=contenedor] {
     max-width: 120rem;
     margin: 0 auto;
     width: 95%;
 }
 
-[class*=__heading] {
+[class*=heading] {
     font-size: 4rem;
     text-align: center;
     font-weight: 900;
@@ -390,4 +390,18 @@ img {
     font-weight: 700;
     text-align: center;
     margin: 0;
+}
+
+/* Página Nosotros */
+
+.nosotros__grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .nosotros__grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
